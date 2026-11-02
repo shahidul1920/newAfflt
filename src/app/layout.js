@@ -1,5 +1,12 @@
 import "./globals.css";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#141414",
+};
+
 export const metadata = {
   title: "Longevity Reviewed – Longevity is confusing. Let's fix that.",
   description: "Independent, evidence-based reporting on human longevity, diet, exercise science, sleep, and emerging biotechnology.",

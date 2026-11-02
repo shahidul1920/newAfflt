@@ -6,7 +6,7 @@ export default function TopicBands({ bands = [] }) {
   return (
     <section className="sec" style={{ paddingTop: 0 }}>
       <div className="wrap">
-        <div className="bands" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <div className="bands">
           {bands.map((band) => (
             <div key={band.slug} className="band">
               <div className="b-head">

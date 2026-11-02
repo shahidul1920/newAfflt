@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import { getAllCategories } from "@/lib/wordpress";
 
 export const metadata = {
@@ -46,9 +47,7 @@ export default async function AffiliateDisclosurePage() {
       </div>
 
       <Footer />
-      <a href="#1" className="sticky-cta">
-        See Top Pick →
-      </a>
+      <StickyCTA />
     </div>
   );
 }

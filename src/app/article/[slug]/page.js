@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import { getPostBySlug, getAllCategories } from "@/lib/wordpress";
 
 export async function generateMetadata({ params }) {
@@ -66,9 +67,7 @@ export default async function ArticlePage({ params }) {
       </div>
 
       <Footer />
-      <a href="#1" className="sticky-cta">
-        See Top Pick →
-      </a>
+      <StickyCTA />
     </div>
   );
 }

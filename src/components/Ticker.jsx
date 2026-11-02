@@ -3,19 +3,19 @@ import Link from "next/link";
 export default function Ticker({ items = [] }) {
   if (!items || items.length === 0) return null;
 
-  // Duplicate items for continuous marquee
-  const displayItems = [...items, ...items];
+  // Duplicate items for continuous infinite marquee animation
+  const displayItems = [...items, ...items, ...items];
 
   return (
-    <div className="ticker">
-      <div className="cst-ticker-inner">
-        <div className="wrap">
-          <span className="label">Latest</span>
-          <div className="items">
+    <div className="ticker" aria-label="Latest headlines ticker">
+      <div className="wrap ticker-wrap">
+        <span className="ticker-badge">Latest</span>
+        <div className="ticker-track-container">
+          <div className="ticker-track">
             {displayItems.map((item, index) => (
-              <span key={`${item.slug}-${index}`} style={{ display: "inline-flex", alignItems: "center" }}>
+              <span key={`${item.slug}-${index}`} className="ticker-item">
                 <Link href={`/article/${item.slug}`}>{item.title}</Link>
-                <span>•</span>
+                <span className="ticker-sep">•</span>
               </span>
             ))}
           </div>

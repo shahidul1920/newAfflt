@@ -5,6 +5,7 @@ import LatestReporting from "@/components/LatestReporting";
 import TopicBands from "@/components/TopicBands";
 import EditorialStandards from "@/components/EditorialStandards";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import {
   getAllCategories,
   getTickerItems,
@@ -45,9 +46,7 @@ export default async function HomePage() {
       <TopicBands bands={bands} />
       <EditorialStandards />
       <Footer />
-      <a href="#1" className="sticky-cta">
-        See Top Pick →
-      </a>
+      <StickyCTA />
     </div>
   );
 }
